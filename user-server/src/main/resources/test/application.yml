@@ -1,0 +1,33 @@
+mybatis:
+  mapper-locations: classpath:mapper/*Mapper.xml
+nacos:
+  config:
+    server-addr: 127.0.0.1:8848
+spring:
+  profiles:
+    active: test
+  datasource:
+    druid:
+      url: jdbc:mysql://localhost:3306/springboot?useUnicode=true&characterEncoding=utf-8&useSSL=true&serverTimezone=UTC
+      username: root
+      password: Root@xiaomo
+      driver-class-name: com.mysql.cj.jdbc.Driver
+      initial-size: 4
+      max-active: 4
+      min-idle: 2
+      max-wait: 60000
+      validation-query: select 1 from dual
+      test-on-borrow: true
+      test-while-idle: true
+
+#spring:
+  freemarker:
+    cache: false
+    encoding: UTF-8
+    template-loader-path: classpath:/templates/
+    expose-request-attributes: true
+    expose-session-attributes: true
+    allow-request-override: false
+    suffix: .ftl
+    content-type: text/html
+    check-template-location: true

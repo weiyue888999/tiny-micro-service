@@ -1,0 +1,28 @@
+mybatis:
+  mapper-locations: classpath:mapper/*Mapper.xml
+nacos:
+  config:
+    server-addr: 127.0.0.1:8848
+spring:
+  application:
+    name: demo-server
+  profiles:
+    active: dev
+#spring:
+  freemarker:
+    cache: false
+    encoding: UTF-8
+    template-loader-path: classpath:/templates/
+    expose-request-attributes: true
+    expose-session-attributes: true
+    allow-request-override: false
+    suffix: .ftl
+    content-type: text/html
+    check-template-location: true
+
+eureka:
+  client:
+    registerWithEureka: true
+    fetchRegistry: true
+    serviceUrl:
+      defaultZone: http://192.168.0.103:7000/eureka

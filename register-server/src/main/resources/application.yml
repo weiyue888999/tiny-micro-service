@@ -1,0 +1,12 @@
+server:
+  port: 7000
+spring:
+  application:
+    name: register
+eureka:
+  client:
+    registerWithEureka: false # 单点的时候设置为 false 禁止注册自身
+    fetchRegistry: false
+    serviceUrl:
+      defaultZone: http://192.168.0.103:7000/eureka/
+    instance: 192.168.0.103
