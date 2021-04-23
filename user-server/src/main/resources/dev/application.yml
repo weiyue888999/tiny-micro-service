@@ -1,18 +1,21 @@
 mybatis:
   mapper-locations: classpath:mapper/*Mapper.xml
-nacos:
-  config:
-    server-addr: 127.0.0.1:8848
 spring:
+  cloud:
+    nacos:
+      discover:
+        server-addr: 127.0.0.1:8848
+      config:
+        server-addr: 127.0.0.1:8848
   application:
     name: user-server
   profiles:
     active: dev
   datasource:
     druid:
-      url: jdbc:mysql://localhost:3306/springboot?useUnicode=true&characterEncoding=utf-8&useSSL=true&serverTimezone=UTC
+      url: jdbc:mysql://localhost:3306/user_server?useUnicode=true&characterEncoding=utf-8&useSSL=true&serverTimezone=UTC
       username: root
-      password: Root@xiaomo
+      password: Xiaomo@xiaomo
       driver-class-name: com.mysql.cj.jdbc.Driver
       initial-size: 4
       max-active: 4
@@ -33,10 +36,3 @@ spring:
     suffix: .ftl
     content-type: text/html
     check-template-location: true
-
-eureka:
-  client:
-    registerWithEureka: true
-    fetchRegistry: true
-    serviceUrl:
-      defaultZone: http://192.168.0.103:7000/eureka

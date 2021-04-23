@@ -5,7 +5,7 @@
 	
     <parent>
         <groupId>io.xiaomo</groupId>
-        <artifactId>micro-service</artifactId>
+        <artifactId>tiny-micro-service</artifactId>
         <version>0.0.1-SNAPSHOT</version>
     </parent>
 	
