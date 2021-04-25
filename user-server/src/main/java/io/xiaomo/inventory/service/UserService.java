@@ -1,6 +1,6 @@
-package io.xiaomo.user.service;
+package io.xiaomo.inventory.service;
 
-import io.xiaomo.user.entity.User;
+import io.xiaomo.inventory.entity.User;
 
 import java.util.List;
 

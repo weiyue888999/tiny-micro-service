@@ -26,6 +26,7 @@
     </properties>
 
     <dependencyManagement>
+
         <dependencies>
             <dependency>
                 <groupId>org.springframework.cloud</groupId>
@@ -33,6 +34,11 @@
                 <version>${spring-cloud.version}</version>
                 <type>pom</type>
                 <scope>import</scope>
+            </dependency>
+            <dependency>
+                <groupId>org.projectlombok</groupId>
+                <artifactId>lombok</artifactId>
+                <version>1.18.20</version>
             </dependency>
         </dependencies>
     </dependencyManagement>
@@ -43,6 +49,7 @@
         <module>order-server</module>
         <module>register-server</module>
         <module>user-server</module>
+        <module>inventory-server</module>
         <module>fund-server</module>
         <module>product-server</module>
         <module>common</module>

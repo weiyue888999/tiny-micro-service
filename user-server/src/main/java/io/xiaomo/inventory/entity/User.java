@@ -1,4 +1,4 @@
-package io.xiaomo.user.entity;
+package io.xiaomo.inventory.entity;
 
 public class User {
 

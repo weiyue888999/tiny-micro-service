@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
-<mapper namespace="io.xiaomo.user.mapper.UserMapper">
+<mapper namespace="io.xiaomo.inventory.mapper.UserMapper">
 
-    <select id="findById" resultType="io.xiaomo.user.entity.User">
+    <select id="findById" resultType="io.xiaomo.inventory.entity.User">
         SELECT * FROM t_user where id = #{id}
     </select>
 
-    <select id="getList" resultType="io.xiaomo.user.entity.User">
+    <select id="getList" resultType="io.xiaomo.inventory.entity.User">
         select * from t_user
         <where>
             <if test="id != null">
@@ -18,7 +18,7 @@
         </where>
     </select>
 
-    <insert id="insert" parameterType="io.xiaomo.user.entity.User">
+    <insert id="insert" parameterType="io.xiaomo.inventory.entity.User">
     </insert>
 
     <update id="update">

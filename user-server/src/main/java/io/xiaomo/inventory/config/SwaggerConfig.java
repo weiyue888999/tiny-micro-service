@@ -1,4 +1,4 @@
-package io.xiaomo.user.config;
+package io.xiaomo.inventory.config;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;

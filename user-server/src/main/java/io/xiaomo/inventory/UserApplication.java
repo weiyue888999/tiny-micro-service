@@ -1,6 +1,5 @@
-package io.xiaomo.user;
+package io.xiaomo.inventory;
 
-import com.alibaba.cloud.nacos.ConditionalOnNacosDiscoveryEnabled;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.web.servlet.ServletComponentScan;

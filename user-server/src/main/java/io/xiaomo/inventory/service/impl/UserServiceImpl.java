@@ -1,8 +1,8 @@
-package io.xiaomo.user.service.impl;
+package io.xiaomo.inventory.service.impl;
 
-import io.xiaomo.user.entity.User;
-import io.xiaomo.user.mapper.UserMapper;
-import io.xiaomo.user.service.UserService;
+import io.xiaomo.inventory.entity.User;
+import io.xiaomo.inventory.mapper.UserMapper;
+import io.xiaomo.inventory.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.cache.annotation.Cacheable;
 import org.springframework.stereotype.Service;

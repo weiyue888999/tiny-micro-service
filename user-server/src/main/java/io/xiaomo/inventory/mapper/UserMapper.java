@@ -1,6 +1,6 @@
-package io.xiaomo.user.mapper;
+package io.xiaomo.inventory.mapper;
 
-import io.xiaomo.user.entity.User;
+import io.xiaomo.inventory.entity.User;
 import org.apache.ibatis.annotations.Mapper;
 import org.apache.ibatis.annotations.Param;
 

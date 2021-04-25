@@ -1,9 +1,8 @@
-package io.xiaomo.user.controller;
+package io.xiaomo.inventory.controller;
 
 import io.swagger.annotations.*;
-import io.xiaomo.common.Result;
-import io.xiaomo.user.entity.User;
-import io.xiaomo.user.service.UserService;
+import io.xiaomo.inventory.entity.User;
+import io.xiaomo.inventory.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
