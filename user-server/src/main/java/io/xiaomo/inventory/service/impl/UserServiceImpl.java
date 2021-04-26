@@ -1,5 +1,6 @@
 package io.xiaomo.inventory.service.impl;
 
+import io.xiaomo.inventory.ddo.UserPageQueryDO;
 import io.xiaomo.inventory.entity.User;
 import io.xiaomo.inventory.mapper.UserMapper;
 import io.xiaomo.inventory.service.UserService;
@@ -24,7 +25,12 @@ public class UserServiceImpl implements UserService {
     }
 
     @Override
-    public List<User> getList(User user) {
-        return this.userMapper.getList(user);
+    public List<User> getPageList(UserPageQueryDO userPageQueryDO) {
+        return this.userMapper.getPageList(userPageQueryDO);
+    }
+
+    @Override
+    public int getListCount(UserPageQueryDO userPageQueryDO) {
+        return this.userMapper.getListCount(userPageQueryDO);
     }
 }

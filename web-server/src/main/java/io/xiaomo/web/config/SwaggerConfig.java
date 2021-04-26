@@ -1,4 +1,4 @@
-package io.xiaomo.inventory.config;
+package io.xiaomo.web.config;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -20,7 +20,7 @@ public class SwaggerConfig {
         return new Docket(DocumentationType.SWAGGER_2)
                 .apiInfo(apiInfo())
                 .select()
-                .apis(RequestHandlerSelectors.basePackage("io.xiaomo.inventory.controller"))
+                .apis(RequestHandlerSelectors.basePackage("io.xiaomo.web.controller"))
                 .paths(PathSelectors.any())
                 .build();
     }
@@ -28,6 +28,8 @@ public class SwaggerConfig {
     private ApiInfo apiInfo() {
         return new ApiInfoBuilder()
                 .title("eboot-api文档")
+                .description("更多信息，请访问https://www.jianshu.com/u/3979cb11f079")
+                .termsOfServiceUrl("https://gitee.com/QuanZhanZhiLu/easy-boot")
                 .version("1.0")
                 .build();
     }

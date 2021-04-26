@@ -6,16 +6,23 @@
         SELECT * FROM t_user where id = #{id}
     </select>
 
-    <select id="getList" resultType="io.xiaomo.inventory.entity.User">
-        select * from t_user
+    <select id="getListCount" resultType="int" parameterType="io.xiaomo.inventory.ddo.UserPageQueryDO">
+        select count(*) from t_user
         <where>
-            <if test="id != null">
-                id = #{id}
-            </if>
             <if test="username != null and username != ''">
                 username = #{username}
             </if>
         </where>
+    </select>
+
+    <select id="getPageList" resultType="io.xiaomo.inventory.entity.User" parameterType="io.xiaomo.inventory.ddo.UserPageQueryDO">
+        select * from t_user
+        <where>
+            <if test="username != null and username != ''">
+                username = #{username}
+            </if>
+        </where>
+        limit #{offset},#{pageSize}
     </select>
 
     <insert id="insert" parameterType="io.xiaomo.inventory.entity.User">

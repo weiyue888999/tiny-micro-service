@@ -1,5 +1,6 @@
 package io.xiaomo.inventory.mapper;
 
+import io.xiaomo.inventory.ddo.UserPageQueryDO;
 import io.xiaomo.inventory.entity.User;
 import org.apache.ibatis.annotations.Mapper;
 import org.apache.ibatis.annotations.Param;
@@ -38,8 +39,9 @@ public interface UserMapper {
 
     /**
      * 获得用户列表
-     * @param user
      * @return
      */
-    List<User> getList(User user);
+    List<User> getPageList(UserPageQueryDO userPageQueryDO);
+
+    int getListCount(UserPageQueryDO userPageQueryDO);
 }

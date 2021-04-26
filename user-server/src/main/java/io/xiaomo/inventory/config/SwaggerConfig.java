@@ -28,8 +28,6 @@ public class SwaggerConfig {
     private ApiInfo apiInfo() {
         return new ApiInfoBuilder()
                 .title("eboot-api文档")
-                .description("更多信息，请访问https://www.jianshu.com/u/3979cb11f079")
-                .termsOfServiceUrl("https://gitee.com/QuanZhanZhiLu/easy-boot")
                 .version("1.0")
                 .build();
     }
